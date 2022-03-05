@@ -14,3 +14,15 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Vasai Birds"
 include ':app'
+
+include ":bindables"
+project(':bindables').projectDir = new File('modules/bindables')
+
+include ":sandwich"
+project(':sandwich').projectDir = new File('modules/sandwich')
+
+include ":whatif"
+project(':whatif').projectDir = new File('modules/whatif')
+
+include ":whatif-android"
+project(':whatif-android').projectDir = new File('modules/whatif-android')
