@@ -100,5 +100,7 @@ ext.versions = [
         mockitoInlineVersion : '3.5.13',
 
         dokkaGradle      : '1.4.32',
-        binaryValidator  : '0.7.1'
+        binaryValidator  : '0.7.1',
+        recyclerView  : '1.2.1',
+        shimmer  : '0.5.0'
 ]

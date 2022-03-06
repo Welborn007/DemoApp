@@ -1,0 +1,44 @@
+plugins {
+  id 'com.android.library'
+  id 'org.jetbrains.dokka'
+  id 'kotlin-android'
+}
+
+apply from: "$rootDir/dependencies.gradle"
+
+android {
+  compileSdkVersion versions.compileSdk
+  defaultConfig {
+    minSdkVersion versions.minSdk
+    targetSdkVersion versions.compileSdk
+    versionCode versions.versionCode
+    versionName versions.versionName
+  }
+  kotlinOptions {
+    jvmTarget = '1.8'
+  }
+  buildFeatures {
+    buildConfig false
+  }
+}
+
+kotlin {
+  explicitApi()
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+  kotlinOptions.freeCompilerArgs += ["-XXLanguage:+InlineClasses"]
+  kotlinOptions.freeCompilerArgs += ["-Xopt-in=kotlin.OptIn"]
+}
+
+dependencies {
+  implementation "androidx.appcompat:appcompat:$versions.androidxAppcompat"
+
+  // unit test
+  testImplementation "junit:junit:$versions.junitVersion"
+  testImplementation "androidx.test:core:$versions.androidxTest"
+  testImplementation "org.robolectric:robolectric:$versions.robolectricVersion"
+  testImplementation "androidx.arch.core:core-testing:$versions.archCompomentVersion"
+  testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$versions.mockitoKotlinVersion"
+}
+apply from: "$rootDir/spotless.gradle"

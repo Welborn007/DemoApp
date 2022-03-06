@@ -26,3 +26,21 @@ project(':whatif').projectDir = new File('modules/whatif')
 
 include ":whatif-android"
 project(':whatif-android').projectDir = new File('modules/whatif-android')
+
+include ":bundler"
+project(':bundler').projectDir = new File('modules/bundler')
+
+include ":transformationlayout"
+project(':transformationlayout').projectDir = new File('modules/transformationlayout')
+
+include ":baserecyclerviewadapter"
+project(':baserecyclerviewadapter').projectDir = new File('modules/baserecyclerviewadapter')
+
+include ":rainbow"
+project(':rainbow').projectDir = new File('modules/rainbow')
+
+include ":androidribbon"
+project(':androidribbon').projectDir = new File('modules/androidribbon')
+
+include ":progressview"
+project(':progressview').projectDir = new File('modules/progressview')

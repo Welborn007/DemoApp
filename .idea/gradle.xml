@@ -11,8 +11,14 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/modules/androidribbon" />
+            <option value="$PROJECT_DIR$/modules/baserecyclerviewadapter" />
             <option value="$PROJECT_DIR$/modules/bindables" />
+            <option value="$PROJECT_DIR$/modules/bundler" />
+            <option value="$PROJECT_DIR$/modules/progressview" />
+            <option value="$PROJECT_DIR$/modules/rainbow" />
             <option value="$PROJECT_DIR$/modules/sandwich" />
+            <option value="$PROJECT_DIR$/modules/transformationlayout" />
             <option value="$PROJECT_DIR$/modules/whatif" />
             <option value="$PROJECT_DIR$/modules/whatif-android" />
           </set>
