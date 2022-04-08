@@ -1,4 +1,4 @@
-package weltech.com.vasai_virarbirds
+package weltech.com.demoapp
 
 import org.junit.Test
 

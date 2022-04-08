@@ -1,4 +1,4 @@
-package weltech.com.vasai_virarbirds
+package weltech.com.demoapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

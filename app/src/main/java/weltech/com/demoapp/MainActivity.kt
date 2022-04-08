@@ -1,4 +1,4 @@
-package weltech.com.vasai_virarbirds
+package weltech.com.demoapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

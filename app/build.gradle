@@ -13,7 +13,7 @@ android {
     compileSdkVersion versions.compileSdk
 
     defaultConfig {
-        applicationId "weltech.com.vasai_virarbirds"
+        applicationId "weltech.com.demoapp"
         minSdkVersion versions.minSdk
         targetSdkVersion versions.compileSdk
         versionCode versions.versionCode
