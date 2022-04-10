@@ -11,8 +11,8 @@
 -keep class ** { @androidx.databinding.Bindable <fields>; }
 
 # bindables
--dontwarn com.skydoves.bindables.**
+-dontwarn com.weltech.bindables.**
 -dontwarn androidx.databinding.Bindable
--keep class com.skydoves.bindables.** { *; }
--keep class ** extends com.skydoves.bindables.**
+-keep class com.weltech.bindables.** { *; }
+-keep class ** extends com.weltech.bindables.**
 -keep @androidx.databinding.Bindable interface *

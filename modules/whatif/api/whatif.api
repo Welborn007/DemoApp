@@ -1,4 +1,4 @@
-public final class com/skydoves/whatif/WhatIf {
+public final class com/weltech/whatif/WhatIf {
 	public static final synthetic fun whatIf (Ljava/lang/Boolean;Lkotlin/jvm/functions/Function0;)Ljava/lang/Boolean;
 	public static final synthetic fun whatIf (Ljava/lang/Boolean;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)Ljava/lang/Boolean;
 	public static final synthetic fun whatIf (Ljava/lang/Object;Ljava/lang/Boolean;Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;
@@ -21,7 +21,7 @@ public final class com/skydoves/whatif/WhatIf {
 	public static final synthetic fun whatIfOr (Ljava/lang/Boolean;Ljava/lang/Boolean;Lkotlin/jvm/functions/Function0;)Ljava/lang/Boolean;
 }
 
-public final class com/skydoves/whatif/WhatIfArray {
+public final class com/weltech/whatif/WhatIfArray {
 	public static final synthetic fun whatIfNotNullOrEmpty ([BLkotlin/jvm/functions/Function1;)[B
 	public static final synthetic fun whatIfNotNullOrEmpty ([BLkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;)[B
 	public static final synthetic fun whatIfNotNullOrEmpty ([CLkotlin/jvm/functions/Function1;)[C
@@ -42,7 +42,7 @@ public final class com/skydoves/whatif/WhatIfArray {
 	public static final synthetic fun whatIfNotNullOrEmpty ([ZLkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;)[Z
 }
 
-public final class com/skydoves/whatif/WhatIfCollections {
+public final class com/weltech/whatif/WhatIfCollections {
 	public static final synthetic fun whatIfAnd (Ljava/lang/Iterable;Lkotlin/jvm/functions/Function0;)Ljava/lang/Iterable;
 	public static final synthetic fun whatIfAnd (Ljava/lang/Iterable;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)Ljava/lang/Iterable;
 	public static final synthetic fun whatIfNotNullOrEmpty (Ljava/util/List;Lkotlin/jvm/functions/Function1;)Ljava/util/List;
@@ -55,7 +55,7 @@ public final class com/skydoves/whatif/WhatIfCollections {
 	public static final synthetic fun whatIfOr (Ljava/lang/Iterable;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)Ljava/lang/Iterable;
 }
 
-public final class com/skydoves/whatif/WhatIfString {
+public final class com/weltech/whatif/WhatIfString {
 	public static final synthetic fun whatIfNotNullOrEmpty (Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Ljava/lang/String;
 	public static final synthetic fun whatIfNotNullOrEmpty (Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;)Ljava/lang/String;
 }

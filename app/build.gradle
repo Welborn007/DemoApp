@@ -5,21 +5,38 @@ plugins {
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'jacoco'
 }
 
 apply from: "$rootDir/dependencies.gradle"
+
+def getProperty(String filename, String propName) {
+    def propsFile = rootProject.file(filename)
+    if (propsFile.exists()) {
+        def props = new Properties()
+        props.load(new FileInputStream(propsFile))
+        if (props[propName] != null) {
+            return props[propName]
+        } else {
+            print("No such property " + propName + " in file " + filename)
+        }
+    } else {
+        print(filename + " does not exist!")
+    }
+}
 
 android {
     compileSdkVersion versions.compileSdk
 
     defaultConfig {
-        applicationId "weltech.com.demoapp"
+        applicationId "com.weltech.demoapp"
         minSdkVersion versions.minSdk
         targetSdkVersion versions.compileSdk
         versionCode versions.versionCode
         versionName versions.versionName
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "MovieDB_API_KEY", "\"${getProperty("local.properties", "moviedb_api_key")}\""
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments += ["room.schemaLocation" : "$projectDir/schemas".toString()]
@@ -107,6 +124,8 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-moshi:$versions.retrofitVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$versions.okhttpVersion"
     testImplementation "com.squareup.okhttp3:mockwebserver:$versions.okhttpVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$versions.retrofitVersion"
+    implementation "com.google.code.gson:gson:$versions.gsonVersion"
 
     // moshi
     implementation "com.squareup.moshi:moshi-kotlin:$versions.moshiVersion"
@@ -123,7 +142,7 @@ dependencies {
 
     // glide
     implementation "com.github.bumptech.glide:glide:$versions.glideVersion"
-//    implementation "com.github.florent37:glidepalette:$versions.glidePaletteVersion"
+    implementation "com.github.florent37:glidepalette:$versions.glidePaletteVersion"
 
     // bundler
     implementation project(":bundler")
@@ -140,9 +159,12 @@ dependencies {
     // custom views
     implementation project(":androidribbon")
     implementation project(":progressview")
+    implementation "com.ms-square:expandableTextView:$versions.expandableTextViewVersion"
 
     // debugging
     implementation "com.jakewharton.timber:timber:$versions.timberVersion"
+    implementation "com.facebook.stetho:stetho:$versions.stethoVersion"
+    implementation "com.facebook.stetho:stetho-okhttp3:$versions.stethoVersion"
 
     // unit test
     testImplementation "junit:junit:$versions.junitVersion"
@@ -155,6 +177,8 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$versions.androidxTestJunit"
     androidTestImplementation "androidx.test:runner:$versions.androidTestRunner"
     androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espressoVersion"
+
+    implementation "androidx.browser:browser:1.4.0"
 }
 
 apply from: "$rootDir/spotless.gradle"
